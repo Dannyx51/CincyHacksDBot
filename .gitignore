@@ -1,0 +1,5 @@
+#ignore cache files
+/__pycache__
+
+#ignore token file
+safe.py

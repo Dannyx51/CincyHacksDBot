@@ -5,6 +5,7 @@ import os
 import schedule
 import time
 import interval as rep
+import safe
 
 bOut = "empty" #this is bot.py's version of out, updated using check using speech.py's version
 print('[bot.py] bOut.equals(' + bOut + ')')
@@ -58,7 +59,7 @@ async def on_message(message):
         wake = "False"
         speech.stop_listening(wait_for_stop=False)
         
-client.run('')
+client.run(safe.token)
 #wake = input() # "True"
 print('[bot.py] wake.equals(' + wake +')')
 
