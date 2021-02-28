@@ -5,7 +5,7 @@ Using this text, we control a discord bot, essentially a voice assistant but for
 
 # How to run
 
-1. If you would like to run this bot yourselves, you will need to download all the project files, and create one of your own.
+1. If you would like to run this bot yourselves, you will need to download all the project files, and create another file to use.
 
 2. The bot token and channel IDs have been implemented in a "safe.py", and so create one following the template below in the same directory as the rest of the project
 ```python
