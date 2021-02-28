@@ -10,7 +10,10 @@ hydraID = safe.hydraID
 
 client = discord.Client() 
 
-
+#
+# Sends message in discord channel using Discord API
+#
+#
 @client.event
 async def p2D(text, ID):
     channel = client.get_channel(ID)
