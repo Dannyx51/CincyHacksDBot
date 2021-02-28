@@ -6,14 +6,14 @@ import time # < ---- apparently not used?
 import safe
 
 genID = safe.generalID
-hydraID = safe.hydraID
 
-client = discord.Client() 
+client = discord.Client()  #<--- creates a bot instance
 
-#
 # Sends message in discord channel using Discord API
-#
-#
+# 
+# @param text:  text to send as discord message
+# @param ID:    channel ID to send message to
+# 
 @client.event
 async def p2D(text, ID):
     channel = client.get_channel(ID)
@@ -28,6 +28,8 @@ async def p2D(text, ID):
 
 s1 , s2 = "", ""
 
+# Checks if text-to-speech contains keywords and executed functionality
+# 
 @tasks.loop(seconds = 1)
 async def check(): #Checks to see if out has had any changes
     # print("Entered check()")
@@ -64,7 +66,7 @@ async def check(): #Checks to see if out has had any changes
 
         elif "weather" in bOut:
             # print("Entered party")
-            await p2D("It's nice outside!", genID)
+            await p2D("It's raining!", genID)
         
         elif "what do you do" in bOut:
             # print("entered jump")
