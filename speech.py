@@ -2,12 +2,12 @@ import speech_recognition as sr
 
 r = sr.Recognizer()
 mc = sr.Microphone()
-out = "Hello"
 
 def callback(recog,audio):
+    global sent  
     try:
-        out = recog.recognize_google(audio)
-        print(out)
+        sent = r.recognize_google(audio)
+        print(sent)
     except sr.UnknownValueError:
         print( "Could not understand")
     except sr.RequestError as e:

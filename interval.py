@@ -1,7 +1,8 @@
 from threading import Timer
+import asyncio
 
 class Interval(object):
-    
+
     # Repeats a function every specified interval
     # 
     # @param self: class itself
@@ -20,7 +21,7 @@ class Interval(object):
 
         self.running = False  # mark not running
         self.start()          # reset the timer for the next go 
-        self.function()       # call the partial function 
+        asyncio.run(self.function())       # call the partial function 
 
     def start(self):
         # """
