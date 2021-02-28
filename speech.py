@@ -3,6 +3,8 @@ import speech_recognition as sr
 r = sr.Recognizer()
 mc = sr.Microphone()
 
+sent = ""
+
 def callback(recog,audio):
     global sent  
     try:
